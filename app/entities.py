@@ -1,5 +1,7 @@
 import random
+
 import pygame
+
 from config import PIPE_GAP, SCREEN_HEIGHT, SCREEN_WIDTH
 
 

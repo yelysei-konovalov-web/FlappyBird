@@ -1,6 +1,6 @@
 import pygame
 
-from config import GROUND_Y, SCREEN_HEIGHT, SCREEN_WIDTH, WHITE
+from app.config import GROUND_Y, SCREEN_HEIGHT, SCREEN_WIDTH, WHITE
 from state import reset_game
 
 

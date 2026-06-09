@@ -1,7 +1,7 @@
 import pygame
 
-from config import PIPE_FREQUENCY
-from entities import create_bird
+from app.config import PIPE_FREQUENCY
+from app.entities import create_bird
 
 
 def create_state(assets):

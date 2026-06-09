@@ -1,7 +1,7 @@
 import pygame
 
-from config import GROUND_Y, PIPE_FREQUENCY, SCROLL_SPEED
-from entities import create_pipe_pair
+from app.config import GROUND_Y, PIPE_FREQUENCY, SCROLL_SPEED
+from app.entities import create_pipe_pair
 
 
 def update_bird(bird, flying, game_over, bird_images, flap_sound):
