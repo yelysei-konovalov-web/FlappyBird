@@ -23,9 +23,9 @@ def update_bird(bird, flying, game_over, bird_images, flap_sound):
   if pygame.mouse.get_pressed()[0] == 0:
     bird["clicked"] = False
 
-  bird["animation_counter"] += 1
-  if bird["animation_counter"] > 5:
-    bird["animation_counter"] = 0
+  bird["counter"] += 1
+  if bird["counter"] > 5:
+    bird["counter"] = 0
     bird["image_index"] = (bird["image_index"] + 1) % len(bird_images)
 
   bird["image"] = pygame.transform.rotate(
@@ -95,6 +95,7 @@ def update_game(state, assets):
   time_now = pygame.time.get_ticks()
   if time_now - state["last_pipe"] > PIPE_FREQUENCY:
     state["pipes"].extend(create_pipe_pair(assets["pipe"]))
+    # Je to extend, nie append, pretože create_pipe_pair vracia zoznam dvoch rúrok a tie je potrebné pridať jednotlivo, nie ako zoznam v zozname.
     state["last_pipe"] = time_now
 
   state["ground_scroll"] -= SCROLL_SPEED
@@ -102,3 +103,5 @@ def update_game(state, assets):
     state["ground_scroll"] = 0
 
   state["pipes"] = update_pipes(state["pipes"])
+
+#update_pipes vráti nový filtrovaný zoznam potrubí (okrem tých, ktoré prešli mimo obrazovky), takže výsledok je potrebné priradiť späť do state["pipes"].update_pipes vráti nový filtrovaný zoznam potrubí (okrem tých, ktoré prešli mimo obrazovky), takže výsledok je potrebné priradiť späť do state["pipes"].

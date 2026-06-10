@@ -1,6 +1,4 @@
 import pygame
-from pygments.lexers import python
-
 from assets import load_assets
 from config import FPS, SCREEN_HEIGHT, SCREEN_WIDTH
 from events import handle_events
@@ -15,7 +13,7 @@ def main():
   clock = pygame.time.Clock()
   screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
   pygame.display.set_caption("Flappy Bird")
-  font = pygame.font.SysFont("Arial", 60)
+  font = pygame.font.SysFont("Segoe UI", 60)
   assets = load_assets()
   button_rect = create_restart_button_rect(assets["button"])
   state = create_state(assets)
@@ -29,4 +27,4 @@ def main():
 
   pygame.quit()
 
-  main()
+main()

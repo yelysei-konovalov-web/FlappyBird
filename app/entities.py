@@ -1,7 +1,5 @@
 import random
-
 import pygame
-
 from config import PIPE_GAP, SCREEN_HEIGHT, SCREEN_WIDTH
 
 
@@ -13,7 +11,7 @@ def create_bird(images):
     "velocity": 0,
     "clicked": False,
     "image_index": 0,
-    "animation_counter": 0,
+    "counter": 0,
     "image": images[0],
   }
 

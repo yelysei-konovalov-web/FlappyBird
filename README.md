@@ -60,6 +60,10 @@ GAME/
 - **`events.py`** – Spracováva udalosti (zatvorenie okna, klik na štart).
 - **`update.py`** – Jadro hry: pohyb vtáka, gravitácia, animácie, posúvanie rúr, detekcia kolízií, počítanie skóre.
 - **`render.py`** – Vykresľuje pozadie, rúry, vtáka, zem, skóre a tlačidlo reštartu.
-- **`main.py`** – Inicializuje Pygame, spúšťa hernú slučku: `udalosti → update → render`.
+- **`main.py`** – Inicializuje Pygame, spúšťa hernú slučku: `events → update → render`.
 
 ---
+
+## Použité materiály
+
+- **obrázovky** - https://github.com/russs123/pygame_flappy_bird_assets

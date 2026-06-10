@@ -11,9 +11,8 @@ def create_restart_button_rect(button_image):
 
 
 def draw_text(screen, text, font, color, x, y):
-  image = font.render(text, True, color)
+  image = font.render(text, True, color) # True — vyhladzovanie okrajov písmen, takže okraje písmen budú hladké, nie pixelované
   screen.blit(image, (x, y))
-
 
 def draw_button(screen, button_rect, button_image):
   screen.blit(button_image, button_rect)
